@@ -3,17 +3,23 @@ const { Schema, model } = require("mongoose");
 const User = Schema({
   name: {
     type: String,
-    require: true,
+    required: true,
   },
   email: {
     type: String,
-    require: true,
+    required: true,
     unique: true,
   },
   password: {
     type: String,
-    require: true,
+    required: true,
   },
 });
+
+// User.method("toJSON", function () {
+//   const { _id, ...object } = this.toObject();
+//   object.id = _id;
+//   return object;
+// });
 
 module.exports = model("User", User);

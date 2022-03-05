@@ -3,11 +3,12 @@
  * host + /api/auth
  */
 const { Router } = require("express");
-const router = Router();
 const { check } = require("express-validator");
 const { validateFields } = require("../middlewares/validateFields");
 const { createUser, login, renewToken } = require("../controllers/auth");
 const { validateJWT } = require("../middlewares/validateJWT");
+
+const router = Router();
 
 router.post(
   "/new",

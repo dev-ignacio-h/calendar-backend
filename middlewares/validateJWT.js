@@ -1,6 +1,5 @@
 const { response } = require("express");
 const jwt = require("jsonwebtoken");
-// const jwt = require("jsonwebtoken");
 
 const validateJWT = (req, res = response, next) => {
   // x-token headers
